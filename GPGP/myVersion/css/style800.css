@@ -1,0 +1,210 @@
+@media screen and (max-width: 800px) {
+  #indexContainer {
+    background: url("../images/hexBG.jpg");
+    background-size: cover;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "header" "title" "mainEvent" "newsAndEvents" "viewMore" "tagLine" "footer";
+  }
+  #indexContainer a {
+    font-size: 25px;
+    text-decoration: underline;
+  }
+  #indexContainer header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #indexContainer header a {
+    text-decoration: none;
+  }
+  #indexContainer header h2 {
+    padding-left: 20px;
+    font-size: 30px;
+  }
+  #indexContainer header #hambMenu {
+    display: block;
+    height: 60px;
+    width: 50px;
+    float: right;
+    margin-right: 50px;
+    margin-top: -50px;
+  }
+  #indexContainer header nav ul {
+    display: none;
+    list-style-type: none;
+    float: none;
+    text-align: center;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+  #indexContainer header nav li {
+    display: block;
+    padding-left: 0px;
+    padding: 20px;
+    font-size: 30px;
+  }
+  #indexContainer header nav li button {
+    border: 1px solid #EFECE7;
+    font-size: 22px;
+  }
+  #indexContainer header nav a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #indexContainer header nav a:hover {
+    text-decoration: underline;
+  }
+  #indexContainer header button {
+    display: none;
+  }
+  #indexContainer #title {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: title;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+  #indexContainer #title h1 {
+    font-size: 50px;
+  }
+  #indexContainer #title #gpgpLogo {
+    height: 150px;
+  }
+  #indexContainer #title .middle-image {
+    width: 150px;
+    height: 170px;
+    vertical-align: middle;
+    display: none;
+  }
+  #indexContainer #title .before-image,
+  #indexContainer #title .after-image {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #indexContainer #title #gpgpLogo {
+    height: 150px;
+  }
+  #indexContainer #mainEvent {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: mainEvent;
+    width: 100%;
+  }
+  #indexContainer #mainEvent .image img {
+    display: block;
+    height: 400px;
+    -webkit-transform: scale(2, 1);
+            transform: scale(2, 1);
+  }
+  #indexContainer #mainEvent .overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #indexContainer #mainEvent .text {
+    color: #EFECE7;
+    padding: 10px;
+  }
+  #indexContainer #mainEvent .text h3 {
+    padding-bottom: 10px;
+    font-size: 30px;
+  }
+  #indexContainer #mainEvent .text p {
+    line-height: 25px;
+  }
+  #indexContainer #mainEvent .text button {
+    margin-top: 20px;
+  }
+  #indexContainer #newsAndEvents {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: newsAndEvents;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    display: block;
+    margin-top: 70px;
+    padding: 20px;
+  }
+  #indexContainer #newsAndEvents #name {
+    border-bottom: 1px solid #9F412C;
+  }
+  #indexContainer #newsAndEvents #name h2 {
+    font-size: 40px;
+  }
+  #indexContainer #newsAndEvents #eventPreview {
+    width: 90%;
+    padding: 20px;
+    margin: 30px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #indexContainer #newsAndEvents #eventPreview h4, #indexContainer #newsAndEvents #eventPreview p {
+    padding: 3px;
+  }
+  #indexContainer #newsAndEvents #eventPreview button {
+    margin: 5px;
+  }
+  #indexContainer #viewMore {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: viewMore;
+    float: none;
+    margin-right: 0px;
+    margin-top: -30px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #indexContainer #tagLine {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: tagLine;
+    width: 80%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 20px;
+  }
+  #indexContainer #tagLine img {
+    width: 40px;
+    margin: 20px;
+  }
+  #indexContainer #tagLine p {
+    width: 100%;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+  #indexContainer footer {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: footer;
+    opacity: 80%;
+    padding: 30px;
+    display: block;
+    text-align: center;
+  }
+  #indexContainer footer h2, #indexContainer footer #rights, #indexContainer footer p {
+    padding: 5px;
+  }
+}
+/*# sourceMappingURL=style800.css.map */

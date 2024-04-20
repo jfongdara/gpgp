@@ -1,0 +1,24 @@
+#form {
+  background-color: #1d213bdf;
+  color: white;
+  margin: 75px;
+  padding: 75px;
+  width: 550px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#form h2 {
+  font-size: 35px;
+}
+
+#form hr {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#form p {
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=createEventStyle.css.map */

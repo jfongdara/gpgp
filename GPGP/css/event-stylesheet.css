@@ -1,0 +1,580 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/hexa_dan_wave_10-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+  font-family: 'rubik','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+a {
+  font-size: 1.3em;
+  text-decoration: none;
+  color: #efece7;
+}
+
+.button {
+  background-color: #a98444e4;
+  padding: 0.5em 2em;
+  color: #efece7;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #0c0d0fe1;
+  color: #efece7;
+  border: 1px solid #efece7;
+}
+
+.yellow-link {
+  color: #d5ab62;
+  text-decoration: underline;
+}
+
+.red-link {
+  color: #9f412c;
+  text-decoration: underline;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #a98444e4;
+  position: fixed;
+  top: 0;
+  z-index: 150;
+  width: 100%;
+}
+
+nav .GPGP-large {
+  font-size: 2.4em;
+  margin-right: 0.5em;
+  margin-left: 0.75em;
+  padding-top: 0.25em;
+  font-family: 'rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav .menu-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 4em);
+}
+
+nav .menu-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+nav .menu-links ul a {
+  padding: 0.85em 1.5em;
+}
+
+nav .menu-links ul a:hover {
+  background-color: #0c0d0fe1;
+  border: 1px solid #0c0d0f;
+}
+
+nav .menu-links ul a.active {
+  background-color: #0c0d0fe1;
+  border: 1px solid #0c0d0f;
+}
+
+nav .menu-links .login-button {
+  border: 1px solid #efece7;
+  padding: 0.35em 2em;
+  margin: 0.5em 0;
+  margin-right: 1.75em;
+}
+
+nav .menu-links .login-button:hover {
+  background-color: #0c0d0fe1;
+  color: #efece7;
+  border: 1px solid #efece7;
+}
+
+.solid-background {
+  background-color: #a98444f8;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-menu span {
+  height: 2px;
+  width: 27px;
+  background-color: #efece7;
+  margin: 4px;
+  -webkit-transition: width 0.5s linear, -webkit-transform 0.5s linear;
+  transition: width 0.5s linear, -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear, width 0.5s linear;
+  transition: transform 0.5s linear, width 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+.hamburger-menu #ham-bar-1.transform {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+}
+
+.hamburger-menu #ham-bar-2 {
+  width: 17px;
+}
+
+.hamburger-menu #ham-bar-2.transform {
+  width: 0;
+}
+
+.hamburger-menu #ham-bar-3.transform {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  left: 0;
+}
+
+footer {
+  background-color: #a98444e4;
+  padding: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  margin: 1em 0;
+}
+
+footer ul a {
+  padding: 1em 1.5em;
+}
+
+footer p {
+  color: #efece7;
+}
+
+@media only screen and (max-width: 1200px) {
+  nav ul .GPGP-large {
+    font-size: 1.75em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #a98444f8;
+  }
+  nav .GPGP-large {
+    font-size: 1.6em;
+    padding: 0.35em 0;
+    padding-top: 0.55em;
+  }
+  nav .menu-links {
+    position: absolute;
+    top: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #a98444f8;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.5s linear;
+    transition: height 0.5s linear;
+  }
+  nav .menu-links ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .menu-links ul li {
+    margin: 1em 0;
+  }
+  nav .menu-links ul a {
+    font-size: 1.5em;
+    padding: 0.25em 1em;
+    margin: 0;
+    text-shadow: 1px 1px 5px #0c0d0f;
+  }
+  nav .menu-links .login-button {
+    margin-right: 0;
+    margin-top: 1em;
+    font-size: 1.2em;
+  }
+  nav .drop-down-menu {
+    height: calc(100vh - 3em);
+  }
+  .hamburger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: fixed;
+    right: 1em;
+    height: 40px;
+    width: 40px;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer ul {
+    margin-bottom: 3em;
+  }
+  footer p {
+    margin-left: 1em;
+  }
+}
+
+#eventContainer {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "carousel carousel carousel carousel" "mainEvent mainEvent mainEvent mainEvent";
+  padding: 20px;
+}
+
+#eventContainer #carousel {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: carousel;
+  padding: 20px;
+  /* Slideshow container */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* On smaller screens, decrease text size */
+  /*@media only screen and (max-width: 300px) {
+        .prev, .next {
+            font-size: 11px
+        }
+        }*/
+}
+
+#eventContainer #carousel .mySlides {
+  display: none;
+}
+
+#eventContainer #carousel .mySlides img {
+  width: 100%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 70px;
+}
+
+#eventContainer #carousel .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+#eventContainer #carousel .prev, #eventContainer #carousel .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  color: #9F412C;
+  font-weight: bold;
+  font-size: 80px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#eventContainer #carousel .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#eventContainer #carousel .prev:hover, #eventContainer #carousel .next:hover {
+  background-color: #EFECE7;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#eventContainer #mainEvent {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: mainEvent;
+  background-color: rgba(29, 33, 59, 0.9);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1250px;
+}
+
+#eventContainer #mainEvent h2 {
+  color: #9F412C;
+  font-size: 2.3em;
+}
+
+#eventContainer #mainEvent #details {
+  padding: 10px;
+}
+
+#eventContainer #mainEvent #details p {
+  padding: 5px;
+  color: #EFECE7;
+}
+
+#eventContainer #mainEvent #details a {
+  color: #EFECE7;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+#eventContainer #mainEvent #schedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#eventContainer #mainEvent #schedule .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#eventContainer #mainEvent #schedule .icon-container .separation-bar {
+  height: 2px;
+  width: 12vw;
+  background-color: #d5ab62;
+  border-radius: 5px;
+}
+
+#eventContainer #mainEvent #schedule .icon-container img {
+  width: 50px;
+  height: auto;
+  margin: 2em;
+}
+
+#eventContainer #mainEvent #schedule h3 {
+  color: #EFECE7;
+  font-size: 1.8em;
+  padding-bottom: 8px;
+}
+
+#eventContainer #mainEvent #schedule h4 {
+  padding: 10px;
+  font-size: 20px;
+  color: #EFECE7;
+}
+
+#eventContainer #mainEvent #schedule p {
+  padding: 5px;
+  color: #EFECE7;
+}
+
+#eventContainer #mainEvent #schedule #thursday, #eventContainer #mainEvent #schedule #friday, #eventContainer #mainEvent #schedule #saturday, #eventContainer #mainEvent #schedule #sunday {
+  display: none;
+  border-bottom: solid 1px #9F412C;
+  padding-bottom: 20px;
+}
+
+#eventContainer #mainEvent #schedule #thursday p, #eventContainer #mainEvent #schedule #friday p, #eventContainer #mainEvent #schedule #saturday p, #eventContainer #mainEvent #schedule #sunday p {
+  padding: 5px;
+}
+
+#eventContainer #mainEvent #schedule img {
+  width: 20px;
+}
+
+#eventContainer #mainEvent #notes {
+  color: #EFECE7;
+  padding: 20px;
+}
+
+#eventContainer #mainEvent #notes h3 {
+  font-size: 1.8em;
+}
+
+#eventContainer #mainEvent #notes p {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  #eventContainer {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "carousel" "mainEvent";
+  }
+  #eventContainer #carousel {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: carousel;
+    display: block;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0px;
+    margin-top: -25px;
+  }
+  #eventContainer #carousel img {
+    width: 100%;
+  }
+  #eventContainer #carousel .prev, #eventContainer #carousel .next {
+    top: 35%;
+    font-size: 40px;
+  }
+  #eventContainer #mainEvent {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: mainEvent;
+    width: 100%;
+  }
+  #eventContainer #mainEvent #details {
+    padding: 10px;
+  }
+  #eventContainer #mainEvent #details h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  #eventContainer #mainEvent #details p {
+    padding: 5px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  #eventContainer #mainEvent #details a {
+    color: #EFECE7;
+  }
+  #eventContainer #mainEvent #schedule h3 {
+    padding: 10px;
+    font-size: 25px;
+  }
+  #eventContainer #mainEvent #schedule p {
+    padding: 5px;
+    font-size: 20px;
+  }
+  #eventContainer #mainEvent #schedule h4 {
+    font-size: 20px;
+  }
+  #eventContainer #mainEvent #schedule .icon-container .separation-bar {
+    width: 20vw;
+  }
+  #eventContainer #mainEvent #schedule .icon-container img {
+    width: 40px;
+    height: auto;
+    margin: .5em;
+  }
+  #eventContainer #mainEvent #schedule #thursday p, #eventContainer #mainEvent #schedule #friday p, #eventContainer #mainEvent #schedule #saturday p, #eventContainer #mainEvent #schedule #sunday p {
+    padding: 5px;
+    font-size: 18px;
+  }
+  #eventContainer #mainEvent #schedule img {
+    width: 20px;
+  }
+  #eventContainer #mainEvent #notes h3 {
+    font-size: 25px;
+  }
+  #eventContainer #mainEvent #notes p {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=event-stylesheet.css.map */

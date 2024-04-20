@@ -1,0 +1,319 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+* h1, * h2, * h3, * h4, * h5, * h6 {
+  font-family: "Rubik", sans-serif;
+}
+
+* h1 {
+  font-size: 70px;
+}
+
+* h2 {
+  font-size: 50px;
+}
+
+* h3 {
+  font-size: 40px;
+}
+
+* h4 {
+  font-size: 30px;
+}
+
+* p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+button {
+  background-color: #A98444;
+  border: none;
+  padding: 10px 20px;
+}
+
+button a {
+  color: #EFECE7;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+button a:hover {
+  text-decoration: underline;
+}
+
+#indexContainer {
+  background: url("../images/hexBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header header" "title title title title" "mainEvent mainEvent mainEvent mainEvent" "newsAndEvents newsAndEvents newsAndEvents newsAndEvents" "viewMore viewMore viewMore viewMore" "tagLine tagLine tagLine tagLine" "footer footer footer footer";
+}
+
+#indexContainer header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: header;
+  background-color: #A98444;
+  background-color: rgba(169, 132, 68, 0.8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#indexContainer header a {
+  text-decoration: none;
+}
+
+#indexContainer header h2 {
+  color: #EFECE7;
+  padding-left: 20px;
+}
+
+#indexContainer header #hambMenu {
+  display: none;
+}
+
+#indexContainer header nav ul {
+  list-style-type: none;
+  margin-left: 150px;
+  margin-bottom: 10px;
+  margin-top: -40px;
+}
+
+#indexContainer header nav ul p {
+  display: none;
+}
+
+#indexContainer header nav li {
+  display: inline;
+  padding-left: 50px;
+  font-size: 22px;
+}
+
+#indexContainer header nav a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #EFECE7;
+}
+
+#indexContainer header nav a:hover {
+  text-decoration: underline;
+}
+
+#indexContainer header button {
+  border: 1px solid #EFECE7;
+  font-size: 22px;
+  float: right;
+  margin-top: -50px;
+  margin-right: 50px;
+}
+
+#indexContainer header button a:hover {
+  text-decoration: underline;
+}
+
+#indexContainer #title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: title;
+  padding: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+#indexContainer #title h1 {
+  color: #EFECE7;
+}
+
+#indexContainer #title .title {
+  text-align: center;
+}
+
+#indexContainer #title .middle-image {
+  width: 150px;
+  height: 170px;
+  vertical-align: middle;
+}
+
+#indexContainer #title .before-image,
+#indexContainer #title .after-image {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#indexContainer #title #gpgpLogo {
+  height: 250px;
+  width: auto;
+}
+
+#indexContainer #featuredEvent {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: mainEvent;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#indexContainer #featuredEvent .image {
+  display: inline-block;
+  position: relative;
+}
+
+#indexContainer #featuredEvent .image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#indexContainer #featuredEvent .overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  /* Adjust the width to cover half of the image */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Adjust the opacity as needed */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#indexContainer #featuredEvent .text {
+  color: #EFECE7;
+  text-align: right;
+  padding: 20px;
+}
+
+#indexContainer #featuredEvent .text h3 {
+  padding-bottom: 20px;
+}
+
+#indexContainer #featuredEvent .text p {
+  line-height: 35px;
+}
+
+#indexContainer #featuredEvent .text button {
+  margin-top: 50px;
+}
+
+#indexContainer #newsAndEvents {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: newsAndEvents;
+  content: "";
+  display: table;
+  clear: both;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  display: block;
+  margin-top: 150px;
+}
+
+#indexContainer #newsAndEvents #name {
+  color: #9F412C;
+  border-bottom: 1px solid #9F412C;
+}
+
+#indexContainer #newsAndEvents #eventPreview {
+  color: #EFECE7;
+  background-color: rgba(29, 33, 59, 0.9);
+  float: left;
+  width: 25%;
+  height: 210px;
+  padding: 20px;
+  margin: 20px;
+}
+
+#indexContainer #newsAndEvents #eventPreview h4, #indexContainer #newsAndEvents #eventPreview p {
+  padding: 3px;
+}
+
+#indexContainer #newsAndEvents #eventPreview button {
+  margin: 5px;
+}
+
+#indexContainer #viewMore {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: viewMore;
+  float: right;
+  margin-right: 125px;
+  margin-top: -10px;
+}
+
+#indexContainer #viewMore button {
+  opacity: 85%;
+}
+
+#indexContainer #tagLine {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: tagLine;
+  background-color: rgba(29, 33, 59, 0.9);
+  color: #EFECE7;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+#indexContainer #tagLine img {
+  width: 40px;
+  margin: 20px;
+}
+
+#indexContainer #tagLine p {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  line-height: 27px;
+  margin-bottom: 20px;
+}
+
+#indexContainer footer {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: footer;
+  background-color: #A98444;
+  color: #EFECE7;
+  opacity: 80%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#indexContainer footer h2, #indexContainer footer #rights, #indexContainer footer p {
+  padding: 5px;
+}
+/*# sourceMappingURL=indexStyle.css.map */

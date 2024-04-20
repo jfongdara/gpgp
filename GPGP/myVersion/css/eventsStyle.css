@@ -1,0 +1,396 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+* h1, * h2, * h3, * h4, * h5, * h6 {
+  font-family: "Rubik", sans-serif;
+}
+
+* h1 {
+  font-size: 70px;
+}
+
+* h2 {
+  font-size: 50px;
+}
+
+* h3 {
+  font-size: 40px;
+}
+
+* h4 {
+  font-size: 30px;
+}
+
+* p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+button {
+  background-color: #A98444;
+  border: none;
+  padding: 10px 20px;
+}
+
+button a {
+  color: #EFECE7;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+button a:hover {
+  text-decoration: underline;
+}
+
+#eventsContainer {
+  background: url("../images/hexBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header header" "carousel carousel carousel carousel" "mainEvent mainEvent mainEvent mainEvent" "footer footer footer footer";
+}
+
+#eventsContainer header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: header;
+  background-color: #A98444;
+  background-color: rgba(169, 132, 68, 0.8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#eventsContainer header a {
+  text-decoration: none;
+}
+
+#eventsContainer header h2 {
+  color: #EFECE7;
+  padding-left: 20px;
+}
+
+#eventsContainer header #hambMenu {
+  display: none;
+}
+
+#eventsContainer header nav ul {
+  list-style-type: none;
+  margin-left: 150px;
+  margin-bottom: 10px;
+  margin-top: -40px;
+}
+
+#eventsContainer header nav ul p {
+  display: none;
+}
+
+#eventsContainer header nav li {
+  display: inline;
+  padding-left: 50px;
+  font-size: 22px;
+}
+
+#eventsContainer header nav a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #EFECE7;
+}
+
+#eventsContainer header nav a:hover {
+  text-decoration: underline;
+}
+
+#eventsContainer header button {
+  border: 1px solid #EFECE7;
+  font-size: 22px;
+  float: right;
+  margin-top: -50px;
+  margin-right: 50px;
+}
+
+#eventsContainer header button a:hover {
+  text-decoration: underline;
+}
+
+#eventsContainer #carousel {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: carousel;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  /* Slideshow container */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* Fading animation */
+  /* On smaller screens, decrease text size */
+}
+
+#eventsContainer #carousel .mySlides {
+  display: none;
+}
+
+#eventsContainer #carousel .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+#eventsContainer #carousel .prev, #eventsContainer #carousel .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #9F412C;
+  font-weight: bold;
+  font-size: 50px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#eventsContainer #carousel .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#eventsContainer #carousel .prev:hover, #eventsContainer #carousel .next:hover {
+  background-color: #EFECE7;
+}
+
+#eventsContainer #carousel .fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #eventsContainer #carousel .prev, #eventsContainer #carousel .next {
+    font-size: 11px;
+  }
+}
+
+#eventsContainer #mainEvent {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: mainEvent;
+  background-color: rgba(29, 33, 59, 0.9);
+  color: #EFECE7;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#eventsContainer #mainEvent #details {
+  padding: 10px;
+}
+
+#eventsContainer #mainEvent #details p {
+  padding: 5px;
+}
+
+#eventsContainer #mainEvent #details a {
+  color: #EFECE7;
+}
+
+#eventsContainer #mainEvent #schedule h4 {
+  padding: 10px;
+}
+
+#eventsContainer #mainEvent #schedule p {
+  padding: 5px;
+}
+
+#eventsContainer #mainEvent #schedule #thursday, #eventsContainer #mainEvent #schedule #friday, #eventsContainer #mainEvent #schedule #saturday, #eventsContainer #mainEvent #schedule #sunday {
+  display: none;
+  border-bottom: solid 1px #9F412C;
+  padding-bottom: 20px;
+}
+
+#eventsContainer #mainEvent #schedule #thursday p, #eventsContainer #mainEvent #schedule #friday p, #eventsContainer #mainEvent #schedule #saturday p, #eventsContainer #mainEvent #schedule #sunday p {
+  padding: 5px;
+}
+
+#eventsContainer #mainEvent #schedule img {
+  width: 30px;
+}
+
+#eventsContainer footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: footer;
+  background-color: #A98444;
+  color: #EFECE7;
+  opacity: 80%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#eventsContainer footer h2, #eventsContainer footer #rights, #eventsContainer footer p {
+  padding: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  #eventsContainer {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "header" "carousel" "mainEvent" "footer";
+  }
+  #eventsContainer header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #eventsContainer header a {
+    text-decoration: none;
+  }
+  #eventsContainer header h2 {
+    padding-left: 20px;
+    font-size: 30px;
+  }
+  #eventsContainer header #hambMenu {
+    display: block;
+    height: 60px;
+    width: 50px;
+    float: right;
+    margin-right: 50px;
+    margin-top: -50px;
+  }
+  #eventsContainer header nav ul {
+    display: none;
+    list-style-type: none;
+    float: none;
+    text-align: center;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+  #eventsContainer header nav li {
+    display: block;
+    padding-left: 0px;
+    padding: 20px;
+    font-size: 30px;
+  }
+  #eventsContainer header nav li button {
+    border: 1px solid #EFECE7;
+    font-size: 22px;
+  }
+  #eventsContainer header nav a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #eventsContainer header button {
+    display: none;
+  }
+  #eventsContainer header button a:hover {
+    text-decoration: underline;
+  }
+  #eventsContainer #carousel {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: carousel;
+    display: block;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 20px;
+  }
+  #eventsContainer #carousel img {
+    width: 100%;
+  }
+  #eventsContainer #mainEvent {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: mainEvent;
+  }
+  #eventsContainer #mainEvent #details {
+    padding: 10px;
+  }
+  #eventsContainer #mainEvent #details h2 {
+    font-size: 35px;
+  }
+  #eventsContainer #mainEvent #details p {
+    padding: 5px;
+  }
+  #eventsContainer #mainEvent #details a {
+    color: #EFECE7;
+  }
+  #eventsContainer #mainEvent #schedule h3 {
+    padding: 10px;
+    font-size: 30px;
+  }
+  #eventsContainer #mainEvent #schedule p {
+    padding: 5px;
+    font-size: 20px;
+  }
+  #eventsContainer #mainEvent #schedule h4 {
+    font-size: 20px;
+  }
+  #eventsContainer #mainEvent #schedule #thursday p, #eventsContainer #mainEvent #schedule #friday p, #eventsContainer #mainEvent #schedule #saturday p, #eventsContainer #mainEvent #schedule #sunday p {
+    padding: 5px;
+  }
+  #eventsContainer #mainEvent #schedule img {
+    width: 20px;
+  }
+  #eventsContainer #mainEvent #notes h3 {
+    font-size: 30px;
+  }
+  #eventsContainer footer {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: footer;
+    opacity: 80%;
+    padding: 30px;
+    display: block;
+    text-align: center;
+  }
+  #eventsContainer footer h2, #eventsContainer footer #rights, #eventsContainer footer p {
+    padding: 5px;
+  }
+}
+/*# sourceMappingURL=eventsStyle.css.map */

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/indexStyle.scss" rel="stylesheet" type="text/scss">
+    <link href="css/indexStyle.css" rel="stylesheet" type="text/css">
+    <link href="css/style800.css" rel="stylesheet" type="text/css">
+    <link href="css/style800.scss" rel="stylesheet" type="text/scss">
+    <link href="css/eventsStyle.css" rel="stylesheet" type="text/css">
+    <link href="css/eventsStyle.scss" rel="stylesheet" type="text/scss">
+    <script src="js.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+    <title>GPGP</title>
+</head>
+<body>
+    <div id="eventsContainer">
+
+        <header>
+            <a href="index.html"><h2>GPGP</h2></a>
+            <img src="images/hambMenu.png" alt="hamburger menu icon" id="hambMenu" onclick="displayMenu()">
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="#">Links</a></li>
+                    <li><a href="#">Mobile</a></li>
+                </ul>
+            </nav>
+            <button id="login"><a href="#">Login</a></button>
+        </header>
+
+        <div id="carousel">
+             <!--SLIDING PHOTOS-->
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img src="images/conversation.jpg" alt="people having a conversation">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="images/FistsInAir.jpg" alt="Group of people with fists in air">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="images/threePeole.jpg" alt="three people conversating">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+            </div>
+                
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                }
+            </script>
+        </div>
+
+        <div id="mainEvent">
+            <div id="details">
+                <h2>Spring Event - FallzCon (BradCon)!</h2>
+                <p><b>When: </b> Thursday May 16th, 2024 - Sunday May 19th, 2024</p>
+                <p><b>Where: </b><a href="https://www.hyatt.com/en-US/hotel/south-dakota/hyatt-place-sioux-falls-south/fsdzs">HYATT Place Soioux Falls - South</a></p>
+                <p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11571.745785880841!2d-96.7875161!3d43.524518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878eca317ccd61f1%3A0xefc5836f3e36730c!2sHyatt%20Place%20Sioux%20Falls%20%E2%80%93%20South!5e0!3m2!1sen!2sus!4v1711144927809!5m2!1sen!2sus" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                <p><b>For Reservations: </b>Call Julie Coleman (605) 444-6833</p>
+            </div>
+
+            <div id="schedule">
+                <img src="images/shieldIcon.png" alt="gold shield icon">
+                <h3>Gaming Schedule</h3>
+                <p>Click the golden arrows to see the games and their times.</p>
+                <h4>Thursday, May 16th <img src="images/goldArrow.png" alt="golden arrow pointing down" onclick="displayThursday()"></h4>
+                    <div id="thursday">
+                        <h4>Game 1</h4>
+                        <p>9:00AM - 1:00PM Morning Session</p>
+                        <p>1:00PM - 2:00PM Lunch</p>
+                        <p>2:00PM - 6:00PM Afternoon Session</p>
+                        <p>6:00PM - 7:00PM Early Arrivers & Dinner</p>
+                        <p>7:00PM Firepit & General Shenanigans</p>
+                    </div>
+
+                <h4>Friday, May 17th <img src="images/goldArrow.png" alt="golden arrow pointing down" onclick="displayFriday()"></h4>
+                    <div id="friday">
+                        <h4>Game 1</h4>
+                        <p>9:00AM - 1:00PM Morning Session</p>
+                        <p>1:00PM - 2:00PM Lunch</p>
+                        <p>2:00PM - 6:00PM Afternoon Session</p>
+                        <p>6:00PM - 7:00PM Early Arrivers & Dinner</p>
+                        <p>7:00PM Firepit & General Shenanigans</p>
+
+                        <h4>Game 2</h4>
+                        <p>9:00AM - 1:00PM Morning Session</p>
+                        <p>1:00PM - 2:00PM Lunch</p>
+                        <p>2:00PM - 6:00PM Afternoon Session</p>
+                        <p>6:00PM - 7:00PM Early Arrivers & Dinner</p>
+                        <p>7:00PM Firepit & General Shenanigans</p>
+
+                        <h4>Game 3</h4>
+                        <p>9:00AM - 1:00PM Morning Session</p>
+                        <p>1:00PM - 2:00PM Lunch</p>
+                        <p>2:00PM - 6:00PM Afternoon Session</p>
+                        <p>6:00PM - 7:00PM Early Arrivers & Dinner</p>
+                        <p>7:00PM Firepit & General Shenanigans</p>
+                    </div>
+
+                <h4>Saturday, May 18th <img src="images/goldArrow.png" alt="golden arrow pointing down" onclick="displaySaturday()"></h4>
+                    <div id="saturday">
+                        <h4>Game 1</h4>
+                        <p>9:00AM - 1:00PM Morning Session</p>
+                        <p>1:00PM - 2:00PM Lunch</p>
+                        <p>2:00PM - 6:00PM Afternoon Session</p>
+                        <p>6:00PM - 7:00PM Early Arrivers & Dinner</p>
+                        <p>7:00PM Firepit & General Shenanigans</p>
+
+                        <h4>Game 2</h4>
+                        <p>9:00AM - 1:00PM Morning Session</p>
+                        <p>1:00PM - 2:00PM Lunch</p>
+                        <p>2:00PM - 6:00PM Afternoon Session</p>
+                        <p>6:00PM - 7:00PM Early Arrivers & Dinner</p>
+                        <p>7:00PM Firepit & General Shenanigans</p>
+
+                        <h4>Game 3</h4>
+                        <p>9:00AM - 1:00PM Morning Session</p>
+                        <p>1:00PM - 2:00PM Lunch</p>
+                        <p>2:00PM - 6:00PM Afternoon Session</p>
+                        <p>6:00PM - 7:00PM Early Arrivers & Dinner</p>
+                        <p>7:00PM Firepit & General Shenanigans</p>
+                    </div>
+
+                <h4>Sunday, May 19th <img src="images/goldArrow.png" alt="golden arrow pointing down" onclick="displaySunday()"></h4>
+                    <div id="sunday">
+                        <h4>Game 1</h4>
+                        <p>9:00AM - 1:00PM Morning Session</p>
+                        <p>1:00PM - 2:00PM Lunch</p>
+                        <p>2:00PM - 6:00PM Afternoon Session</p>
+                        <p>6:00PM - 7:00PM Early Arrivers & Dinner</p>
+                        <p>7:00PM Firepit & General Shenanigans</p>
+
+                        <h4>Game 2</h4>
+                        <p>9:00AM - 1:00PM Morning Session</p>
+                        <p>1:00PM - 2:00PM Lunch</p>
+                        <p>2:00PM - 6:00PM Afternoon Session</p>
+                        <p>6:00PM - 7:00PM Early Arrivers & Dinner</p>
+                        <p>7:00PM Firepit & General Shenanigans</p>
+
+                        <h4>Game 3</h4>
+                        <p>9:00AM - 1:00PM Morning Session</p>
+                        <p>1:00PM - 2:00PM Lunch</p>
+                        <p>2:00PM - 6:00PM Hugs, Cheers, Tears, & Departures</p>
+                    </div>
+            </div>
+
+            <div id="notes">
+                <h3>Game Notes: </h3>
+                <p>Game notes will appear here</p>
+            </div>
+        </div>
+
+        <footer>
+            <div>
+                <p>Code of Conduct</p>
+                <p>Privacy Policy</p>
+            </div>
+            <h2>GPGP</h2>
+            <p id="rights">2024 All Rights Reserved</p>
+        </footer>
+
+    </div><!--close indexContainer-->
+    
+</body>
+</html>
